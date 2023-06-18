@@ -9,3 +9,13 @@
 .link.active {
   color: #e84a5f;
 }
+
+.text {
+  font-weight: 900;
+  font-size: x-large;
+  color: lightslategray;
+  text-decoration: underline;
+}
+.link:hover {
+  text-decoration: underline;
+}

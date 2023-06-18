@@ -6,12 +6,13 @@ import {
   selectIsLoading,
   selectError,
 } from 'redux/contacts/selectors';
-import { ContList, ContItem, ListBtn, Span } from './ContactList.styled';
+import { ContList, ContItem, Span } from './ContactList.styled';
 import contactsOperations from 'redux/contacts/operations';
 import Loader from 'components/loader/loader';
 import defaultAvatar from '../UserMenu/default-avatar.png';
 import css from '../UserMenu/UserMenu.module.css';
-
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 const ContactList = () => {
   const avatar = defaultAvatar;
   const contacts = useSelector(selectContacts);
@@ -33,16 +34,23 @@ const ContactList = () => {
           return (
             <ContItem key={id}>
               <Span>
-                <img src={avatar} alt="" width="22" className={css.avatar} />
+                <img
+                  src={avatar}
+                  alt=""
+                  width="22"
+                  height="22"
+                  className={css.avatar}
+                />
                 {name}: {number}
               </Span>
-              <ListBtn
+              <IconButton
                 onClick={() => dispatch(contactsOperations.deleteContact(id))}
                 id={id}
                 type="button"
+                aria-label="delete"
               >
-                Delete
-              </ListBtn>
+                <DeleteIcon />
+              </IconButton>
             </ContItem>
           );
         })}

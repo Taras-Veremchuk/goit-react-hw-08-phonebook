@@ -4,7 +4,7 @@ import Filter from '../components/Filter/Filter';
 
 const styles = {
   container: {
-    width: 600,
+    maxWidth: 600,
     margin: '0 auto',
     padding: 10,
     border: 'solid 2px grey',

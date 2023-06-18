@@ -12,15 +12,8 @@ export const ContItem = styled.li`
   margin: 10px;
 `;
 
-export const ListBtn = styled.button`
-  background-color: #efc050;
-  border: none;
-  border-radius: 5px;
-  align-self: center;
-  cursor: pointer;
-`;
 export const Span = styled.span`
-  display: flex;
+  display: inline-flex;
   align-item: center;
   justify-content: center;
   gap: 5px;

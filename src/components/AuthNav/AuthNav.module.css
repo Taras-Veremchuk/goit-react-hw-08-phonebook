@@ -9,3 +9,6 @@
 .link.active {
   color: #e84a5f;
 }
+.link:hover {
+  text-decoration: underline;
+}
