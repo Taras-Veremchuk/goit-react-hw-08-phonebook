@@ -14,7 +14,12 @@ export const Navigation = () => {
           </NavLink>
         </>
       ) : (
-        <p className={css.text}>Welcome to your personal phonebook </p>
+        <span className={css.span}>
+          <NavLink className={css.link} to="/">
+            Home
+          </NavLink>
+          <p className={css.text}>Welcome to your personal phonebook </p>
+        </span>
       )}
     </nav>
   );

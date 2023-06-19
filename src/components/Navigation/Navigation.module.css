@@ -19,3 +19,9 @@
 .link:hover {
   text-decoration: underline;
 }
+.span {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}

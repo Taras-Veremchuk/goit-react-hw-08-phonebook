@@ -1,25 +1,40 @@
-// import { useSelector } from 'react-redux';
-// import { selectIsLoggedIn } from 'redux/auth/selectors';
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const styles = {
-  container: {
-    minHeight: 'calc(100vh - 50px)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontWeight: 500,
-    fontSize: 48,
-    textAlign: 'center',
-  },
-};
+const defaultTheme = createTheme();
 
 export default function Home() {
-  // const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>It's your personal phonebook</h1>
-    </div>
+    <ThemeProvider theme={defaultTheme}>
+      <Grid container component="main" sx={{ height: '100vh' }}>
+        <CssBaseline />
+        <Grid
+          item
+          xs={false}
+          sm={true}
+          md={true}
+          sx={{
+            backgroundImage:
+              'url(https://source.unsplash.com/random?wallpapers)',
+            maxWidth: { xs: '100%' },
+            flexBasis: {
+              xs: 0,
+            },
+            flexGrow: {
+              xs: 1,
+            },
+            backgroundRepeat: 'no-repeat',
+            backgroundColor: t =>
+              t.palette.mode === 'light'
+                ? t.palette.grey[50]
+                : t.palette.grey[900],
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+      </Grid>
+    </ThemeProvider>
   );
 }
